@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 import Header from "@/app/components/Header/Header";
 
 interface Set {
@@ -35,7 +36,7 @@ const Sets = async () => {
                                         <p>A card component has a figure, a body part, and inside body there are title
                                             and actions parts</p>
                                         <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">View Set</button>
+                                            <Link href={`/sets/${set.id.toLowerCase()}`} className="btn btn-primary">View Set</Link>
                                         </div>
                                     </div>
                                 </div>
